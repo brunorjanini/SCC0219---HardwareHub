@@ -136,13 +136,32 @@ Organização prevista: `mockups-html/css/styles.css` concentra as variáveis de
 
 ## 6. Procedimentos de build
 
-Para visualizar os mockups em HTML (Milestone 1):
+### 6.1 Mockups em HTML (Milestone 1)
 
-1. Clone o repositório: `git clone [URL do repositório]`
-2. Entre na pasta: `cd [nome-do-repositório]/mockups-html`
+Para visualizar os mockups estáticos:
+
+1. Clone o repositório: `git clone https://github.com/brunorjanini/scc0219_hardwarehub`
+2. Entre na pasta: `cd scc0219_hardwarehub/mockups-html`
 3. Abra o arquivo `home.html` em um navegador (Chrome, Firefox ou Edge).
 
 As demais telas estão no PDF do mockup completo em `docs/` e no link do Figma acima.
+
+### 6.2 Frontend (Vite + React)
+
+**Pré-requisitos:** [Node.js](https://nodejs.org/) (versão LTS recente) e npm.
+
+1. Clone o repositório (se ainda não o fez): `git clone https://github.com/brunorjanini/scc0219_hardwarehub`
+2. Entre na pasta do frontend: `cd scc0219_hardwarehub/frontend`
+3. Instale as dependências: `npm install`
+4. Inicie o servidor de desenvolvimento: `npm run dev`
+5. Abra o endereço exibido no terminal (por padrão, `http://localhost:5173`).
+
+**Build de produção:**
+
+```bash
+npm run build     # gera os arquivos otimizados em frontend/dist
+npm run preview   # serve o build localmente para conferência
+```
 
 ## 7. Problemas
 

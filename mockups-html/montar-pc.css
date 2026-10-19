@@ -1,46 +1,52 @@
+/* ===== Design tokens ===== */
+/* Note: --blue, --blue-light, --gray-light and --radius-button are used below
+   but defined in the shared stylesheet (style.css) */
 :root {
-  --borda-clara: rgb(226, 232, 240);
-  --texto-secundario: rgb(100, 116, 139);
-  --texto-apagado: rgb(148, 163, 184);
-  --verde: rgb(21, 128, 61);
-  --verde-claro: rgb(240, 253, 244);
-  --laranja: rgb(234, 88, 12);
-  --laranja-claro: rgb(255, 247, 237);
-  --ciano: rgb(6, 182, 212);
-  --escuro: rgb(11, 18, 32);
+  --border-light: rgb(226, 232, 240);
+  --text-secondary: rgb(100, 116, 139);
+  --text-muted: rgb(148, 163, 184);
+  --green: rgb(21, 128, 61);
+  --green-light: rgb(240, 253, 244);
+  --orange: rgb(234, 88, 12);
+  --orange-light: rgb(255, 247, 237);
+  --cyan: rgb(6, 182, 212);
+  --dark: rgb(11, 18, 32);
 }
 
-#montador-intro {
+/* ===== Page intro: title and progress ===== */
+#builder-intro {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   gap: 1rem;
 }
 
-#montador-titulo {
+#builder-title {
   display: flex;
   flex-direction: column;
   gap: 0.3rem;
 }
 
-#montador-rotulo {
-  color: var(--azul);
+/* Small label above the title */
+#builder-label {
+  color: var(--blue);
   font-size: 0.6rem;
   font-weight: bold;
   letter-spacing: 0.03em;
 }
 
-#montador-titulo h1 {
+#builder-title h1 {
   font-size: 2rem;
   font-weight: 400;
 }
 
-#montador-subtitulo {
-  color: var(--texto-secundario);
+#builder-subtitle {
+  color: var(--text-secondary);
   font-size: 0.8rem;
 }
 
-#progresso {
+/* Build progress (text + bar) */
+#progress {
   display: flex;
   flex-direction: column;
   gap: 0.3rem;
@@ -48,42 +54,45 @@
   font-size: 0.6rem;
 }
 
-#progresso-barra {
+#progress-bar {
   overflow: hidden;
   height: 0.35rem;
   border-radius: 50px;
-  background-color: var(--borda-clara);
+  background-color: var(--border-light);
 }
 
-#progresso-barra-preenchida {
+#progress-bar-fill {
   width: 62.5%;
   height: 100%;
-  background-color: var(--azul);
+  background-color: var(--blue);
 }
 
-#alerta-compatibilidade {
+/* ===== Compatibility alert ===== */
+#compatibility-alert {
   display: flex;
   align-items: center;
   gap: 0.6rem;
   padding: 0.8rem 1rem;
   border-radius: 0.5rem;
-  background-color: var(--verde-claro);
-  color: var(--verde);
+  background-color: var(--green-light);
+  color: var(--green);
   font-size: 0.7rem;
   font-weight: bold;
 }
 
-#alerta-compatibilidade i {
-  color: var(--verde);
+#compatibility-alert i {
+  color: var(--green);
 }
 
-#montador-conteudo {
+/* ===== Builder content: component list + summary side by side ===== */
+#builder-content {
   display: flex;
   align-items: flex-start;
   gap: 1.2rem;
 }
 
-#lista-componentes {
+/* ===== Component list ===== */
+#component-list {
   display: flex;
   flex: 1;
   flex-direction: column;
@@ -91,17 +100,18 @@
   min-width: 0;
 }
 
-.componente {
+/* Single component row */
+.component {
   display: flex;
   align-items: center;
   gap: 0.8rem;
   padding: 0.7rem 1rem;
   background-color: white;
-  border: 1px solid var(--borda-clara);
+  border: 1px solid var(--border-light);
   border-radius: 0.6rem;
 }
 
-.componente-icone {
+.component-icon {
   display: flex;
   flex-shrink: 0;
   justify-content: center;
@@ -109,14 +119,14 @@
   width: 2rem;
   height: 2rem;
   border-radius: 0.5rem;
-  background-color: var(--azul-claro);
+  background-color: var(--blue-light);
 }
 
-.componente-icone i {
-  color: var(--verde);
+.component-icon i {
+  color: var(--green);
 }
 
-.componente-info {
+.component-info {
   display: flex;
   flex: 1;
   flex-direction: column;
@@ -124,67 +134,71 @@
   min-width: 0;
 }
 
-.componente-categoria {
-  color: var(--texto-secundario);
+.component-category {
+  color: var(--text-secondary);
   font-size: 0.55rem;
   font-weight: bold;
   letter-spacing: 0.03em;
   text-transform: uppercase;
 }
 
-.componente-nome {
+/* Name is truncated with an ellipsis when too long */
+.component-name {
   overflow: hidden;
   font-size: 0.75rem;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
-.componente-aviso {
-  color: var(--laranja);
+.component-warning {
+  color: var(--orange);
   font-size: 0.55rem;
 }
 
-.componente-preco {
-  color: var(--escuro);
+.component-price {
+  color: var(--dark);
   font-size: 0.8rem;
   font-weight: bold;
   white-space: nowrap;
 }
 
-.componente-botao {
+.component-button {
   padding: 0.6rem 1rem;
   background-color: white;
-  border: 1px solid var(--borda-clara);
-  border-radius: var(--raio-botao);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-button);
   color: black;
   font-size: 0.8rem;
   cursor: pointer;
 }
 
-.componente-alerta {
-  border-color: var(--laranja);
+/* Variant: component with a compatibility issue */
+.component-alert {
+  border-color: var(--orange);
 }
 
-.componente-alerta .componente-icone {
-  background-color: var(--laranja-claro);
+.component-alert .component-icon {
+  background-color: var(--orange-light);
 }
 
-.componente-alerta .componente-icone i {
-  color: var(--laranja);
+.component-alert .component-icon i {
+  color: var(--orange);
 }
 
-.componente-vazio .componente-icone {
-  background-color: var(--cinza-claro);
+/* Variant: empty slot (no component chosen yet) */
+.component-empty .component-icon {
+  background-color: var(--gray-light);
 }
 
-.componente-vazio .componente-icone i,
-.componente-vazio .componente-categoria,
-.componente-vazio .componente-nome,
-.componente-vazio .componente-preco {
-  color: var(--texto-apagado);
+.component-empty .component-icon i,
+.component-empty .component-category,
+.component-empty .component-name,
+.component-empty .component-price {
+  color: var(--text-muted);
 }
 
-#resumo-setup {
+/* ===== Setup summary (side card) ===== */
+#setup-summary {
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
@@ -192,137 +206,144 @@
   width: 15rem;
   padding: 1rem;
   background-color: white;
-  border: 1px solid var(--borda-clara);
+  border: 1px solid var(--border-light);
   border-radius: 0.7rem;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
 }
 
-#resumo-setup h2 {
+#setup-summary h2 {
   font-size: 1rem;
   font-weight: 400;
 }
 
-#metricas {
+/* Performance metrics */
+#metrics {
   display: flex;
   flex-direction: column;
   gap: 0.7rem;
 }
 
-.metrica {
+.metric {
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
 }
 
-.metrica-texto {
+.metric-text {
   display: flex;
   justify-content: space-between;
-  color: var(--texto-secundario);
+  color: var(--text-secondary);
   font-size: 0.55rem;
 }
 
-.metrica-nivel {
-  color: var(--azul);
+.metric-level {
+  color: var(--blue);
 }
 
-.metrica-barra {
+.metric-bar {
   overflow: hidden;
   height: 0.25rem;
   border-radius: 50px;
-  background-color: var(--borda-clara);
+  background-color: var(--border-light);
 }
 
-.metrica-barra-preenchida {
+.metric-bar-fill {
   height: 100%;
-  background-color: var(--ciano);
+  background-color: var(--cyan);
 }
 
-.metrica-jogos .metrica-barra-preenchida {
+/* Fill width per metric */
+.metric-gaming .metric-bar-fill {
   width: 90%;
 }
 
-.metrica-criacao .metrica-barra-preenchida {
+.metric-creation .metric-bar-fill {
   width: 88%;
 }
 
-.metrica-custo-beneficio .metrica-barra-preenchida {
+.metric-value-for-money .metric-bar-fill {
   width: 78%;
 }
 
-#resumo-total {
+/* Total price row */
+#summary-total {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-top: 0.8rem;
-  border-top: 1px solid var(--borda-clara);
+  border-top: 1px solid var(--border-light);
 }
 
-#total-rotulo {
+#total-label {
   font-size: 0.65rem;
 }
 
-#total-valor {
-  color: var(--escuro);
+#total-value {
+  color: var(--dark);
   font-size: 1.5rem;
   font-weight: bold;
 }
 
-#botao-adicionar-configuracao {
+/* Primary action: add the whole build to the cart */
+#add-build-button {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 0.6rem;
   padding: 0.7rem;
-  background-color: var(--azul);
+  background-color: var(--blue);
   border: none;
-  border-radius: var(--raio-botao);
+  border-radius: var(--radius-button);
   color: white;
   font-size: 0.75rem;
   cursor: pointer;
 }
 
-#botao-adicionar-configuracao i {
+#add-build-button i {
   color: inherit;
 }
 
-#botao-adicionar-configuracao:disabled {
-  background-color: var(--borda-clara);
-  color: var(--texto-apagado);
+#add-build-button:disabled {
+  background-color: var(--border-light);
+  color: var(--text-muted);
   cursor: not-allowed;
 }
 
-#resumo-aviso {
-  color: var(--laranja);
+#summary-warning {
+  color: var(--orange);
   font-size: 0.6rem;
   text-align: center;
 }
 
+/* ===== Responsive: tablet (up to 900px) ===== */
 @media (max-width: 900px) {
-  #montador-conteudo {
+  /* Summary goes below the component list */
+  #builder-content {
     flex-direction: column;
     align-items: stretch;
   }
 
-  #resumo-setup {
+  #setup-summary {
     width: 100%;
   }
 }
 
+/* ===== Responsive: mobile (up to 600px) ===== */
 @media (max-width: 600px) {
-  #progresso {
+  #progress {
     display: none;
   }
 
-  #montador-titulo h1 {
+  #builder-title h1 {
     font-size: 1.6rem;
   }
 
-  .componente {
+  .component {
     gap: 0.6rem;
     padding: 0.6rem 0.7rem;
   }
 
-  .componente-botao {
+  .component-button {
     padding: 0.5rem 0.8rem;
   }
 }

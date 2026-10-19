@@ -1,0 +1,23 @@
+/* Colors as variables */
+:root {
+  --azul: rgb(37, 99, 235);
+  --azul-claro: rgb(239, 246, 255);
+  --cinza-claro: rgb(248, 250, 252);
+  --cinza-texto: rgb(100, 116, 139);
+  --borda: rgb(226, 232, 240);
+  --escuro: rgb(11, 18, 32);
+  --ciano: rgb(6, 182, 212);
+  --verde: rgb(22, 163, 74);
+  --verde-claro: rgb(240, 253, 244);
+  --vermelho: rgb(220, 38, 38);
+  --vermelho-claro: rgb(254, 242, 242);
+  --raio-botao: 0.3rem;
+  --raio-campo: 0.5rem;
+}
+
+/* Restart the default style */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

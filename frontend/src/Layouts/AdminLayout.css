@@ -1,0 +1,53 @@
+/* Global font for all elements */
+* {
+  font-family: "Inter", sans-serif;
+}
+
+/* Page wrapper: sidebar and content side by side */
+.layout {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Logo inside the sidebar */
+.logo {
+  width: 9rem;
+  padding: 0 0.8rem;
+  padding-top: 1rem;
+}
+
+/* Sidebar container: fixed width, full viewport height */
+.navbar {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--escuro);
+  width: 12.5rem;
+  height: 100vh;
+}
+
+/* Navigation menu: vertical list of links */
+nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 1rem 0.8rem;
+  background-color: var(--escuro);
+}
+
+/* Navigation link: full-width clickable item */
+nav a {
+  display: block;
+  width: 100%;
+  padding: 0.7rem 0.8rem;
+  color: rgb(206, 206, 206);
+  font-size: 0.65rem;
+  text-decoration: none;
+  border-radius: 0.5rem;
+}
+
+/* Highlight for the current page link (set by React Router) */
+nav a.active {
+  background-color: var(--azul);
+  color: white;
+}

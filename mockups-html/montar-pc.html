@@ -4,8 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Monte seu PC | HardwareHub</title>
+    <!-- Shared styles + PC builder page styles -->
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="montar-pc.css" />
+    <!-- Font Awesome icons -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -14,58 +16,65 @@
 
   <body>
     <header>
-      <div id="barra-topo">
+      <!-- Top bar: promo message and help link -->
+      <div id="top-bar">
         <p>Frete grátis acima de R$ 499</p>
         <p>Central de ajuda</p>
       </div>
-      <div id="barra-principal">
+
+      <!-- Main bar: logo, search, PC builder link and user/cart icons -->
+      <div id="main-bar">
         <div class="logo">
           <img
-            class="logo-imagem"
+            class="logo-image"
             src="../assets/logo_hardware_hub.png"
             alt="Logo da HardwareHub"
           />
           <p class="logo-hardware">Hardware</p>
           <p class="logo-hub">Hub</p>
         </div>
-        <div id="campo-busca">
+        <div id="search-field">
           <i class="fa-solid fa-magnifying-glass"></i>
           <input placeholder="Busque hardware e serviços..." />
         </div>
-        <p id="link-monte-pc">Monte seu PC</p>
+        <p id="build-pc-link">Monte seu PC</p>
         <i class="fa-solid fa-user"></i>
         <i class="fa-solid fa-cart-shopping"></i>
       </div>
+
+      <!-- Category navigation -->
       <nav>
-        <ul id="menu-principal">
+        <ul id="main-menu">
           <li><a href="#hardware">Hardware</a></li>
-          <li><a href="#perifericos">Periféricos</a></li>
-          <li><a href="#computadores">Computadores</a></li>
-          <li><a href="#servicos">Serviços</a></li>
-          <li><a id="link-ofertas" href="#ofertas">Ofertas</a></li>
+          <li><a href="#peripherals">Periféricos</a></li>
+          <li><a href="#computers">Computadores</a></li>
+          <li><a href="#services">Serviços</a></li>
+          <li><a id="offers-link" href="#offers">Ofertas</a></li>
         </ul>
       </nav>
     </header>
 
     <main>
-      <div id="montador-intro">
-        <div id="montador-titulo">
-          <p id="montador-rotulo">MONTADOR INTELIGENTE</p>
+      <!-- Page intro: title and build progress -->
+      <div id="builder-intro">
+        <div id="builder-title">
+          <p id="builder-label">MONTADOR INTELIGENTE</p>
           <h1>Monte seu PC</h1>
-          <p id="montador-subtitulo">
+          <p id="builder-subtitle">
             Escolha as peças. Nós validamos a compatibilidade em tempo real.
           </p>
         </div>
 
-        <div id="progresso">
+        <div id="progress">
           <p>5 de 8 componentes selecionados</p>
-          <div id="progresso-barra">
-            <div id="progresso-barra-preenchida"></div>
+          <div id="progress-bar">
+            <div id="progress-bar-fill"></div>
           </div>
         </div>
       </div>
 
-      <div id="alerta-compatibilidade" role="status">
+      <!-- Compatibility status message -->
+      <div id="compatibility-alert" role="status">
         <i class="fa-solid fa-shield-halved"></i>
         <p>
           Configuração compatível. Consumo estimado: 542W • Fonte recomendada:
@@ -73,139 +82,146 @@
         </p>
       </div>
 
-      <div id="montador-conteudo">
-        <div id="lista-componentes">
-          <div class="componente">
-            <div class="componente-icone">
+      <!-- Builder content: component list + setup summary -->
+      <div id="builder-content">
+        <!-- Component list -->
+        <div id="component-list">
+          <div class="component">
+            <div class="component-icon">
               <i class="fa-regular fa-circle-check"></i>
             </div>
-            <div class="componente-info">
-              <p class="componente-categoria">Processador</p>
-              <p class="componente-nome">AMD Ryzen 7 7800X3D</p>
+            <div class="component-info">
+              <p class="component-category">Processador</p>
+              <p class="component-name">AMD Ryzen 7 7800X3D</p>
             </div>
-            <p class="componente-preco">R$ 2.499</p>
-            <button class="componente-botao">Trocar</button>
+            <p class="component-price">R$ 2.499</p>
+            <button class="component-button">Trocar</button>
           </div>
 
-          <div class="componente">
-            <div class="componente-icone">
+          <div class="component">
+            <div class="component-icon">
               <i class="fa-regular fa-circle-check"></i>
             </div>
-            <div class="componente-info">
-              <p class="componente-categoria">Placa-mãe</p>
-              <p class="componente-nome">ASUS TUF Gaming B650M-Plus</p>
+            <div class="component-info">
+              <p class="component-category">Placa-mãe</p>
+              <p class="component-name">ASUS TUF Gaming B650M-Plus</p>
             </div>
-            <p class="componente-preco">R$ 1.299</p>
-            <button class="componente-botao">Trocar</button>
+            <p class="component-price">R$ 1.299</p>
+            <button class="component-button">Trocar</button>
           </div>
 
-          <div class="componente">
-            <div class="componente-icone">
+          <div class="component">
+            <div class="component-icon">
               <i class="fa-regular fa-circle-check"></i>
             </div>
-            <div class="componente-info">
-              <p class="componente-categoria">Placa de vídeo</p>
-              <p class="componente-nome">GeForce RTX 4070 SUPER 12GB</p>
+            <div class="component-info">
+              <p class="component-category">Placa de vídeo</p>
+              <p class="component-name">GeForce RTX 4070 SUPER 12GB</p>
             </div>
-            <p class="componente-preco">R$ 4.299</p>
-            <button class="componente-botao">Trocar</button>
+            <p class="component-price">R$ 4.299</p>
+            <button class="component-button">Trocar</button>
           </div>
 
-          <div class="componente">
-            <div class="componente-icone">
+          <div class="component">
+            <div class="component-icon">
               <i class="fa-regular fa-circle-check"></i>
             </div>
-            <div class="componente-info">
-              <p class="componente-categoria">Memória</p>
-              <p class="componente-nome">Kingston Fury 32GB DDR5 6000MHz</p>
+            <div class="component-info">
+              <p class="component-category">Memória</p>
+              <p class="component-name">Kingston Fury 32GB DDR5 6000MHz</p>
             </div>
-            <p class="componente-preco">R$ 899</p>
-            <button class="componente-botao">Trocar</button>
+            <p class="component-price">R$ 899</p>
+            <button class="component-button">Trocar</button>
           </div>
 
-          <div class="componente componente-alerta">
-            <div class="componente-icone">
+          <!-- Component with a compatibility warning -->
+          <div class="component component-alert">
+            <div class="component-icon">
               <i class="fa-solid fa-triangle-exclamation"></i>
             </div>
-            <div class="componente-info">
-              <p class="componente-categoria">Fonte</p>
-              <p class="componente-nome">Corsair CX650 650W 80 Plus Bronze</p>
-              <p class="componente-aviso">
+            <div class="component-info">
+              <p class="component-category">Fonte</p>
+              <p class="component-name">Corsair CX650 650W 80 Plus Bronze</p>
+              <p class="component-warning">
                 Potência próxima do limite recomendado
               </p>
             </div>
-            <p class="componente-preco">R$ 499</p>
-            <button class="componente-botao">Trocar</button>
+            <p class="component-price">R$ 499</p>
+            <button class="component-button">Trocar</button>
           </div>
 
-          <div class="componente componente-vazio">
-            <div class="componente-icone">
+          <!-- Empty slot: no component chosen yet -->
+          <div class="component component-empty">
+            <div class="component-icon">
               <i class="fa-solid fa-plus"></i>
             </div>
-            <div class="componente-info">
-              <p class="componente-categoria">Armazenamento</p>
-              <p class="componente-nome">Escolha um SSD ou HD</p>
+            <div class="component-info">
+              <p class="component-category">Armazenamento</p>
+              <p class="component-name">Escolha um SSD ou HD</p>
             </div>
-            <p class="componente-preco">–</p>
-            <button class="componente-botao">Escolher</button>
+            <p class="component-price">–</p>
+            <button class="component-button">Escolher</button>
           </div>
         </div>
 
-        <div id="resumo-setup">
+        <!-- Setup summary: performance metrics, total and add-to-cart -->
+        <div id="setup-summary">
           <h2>Resumo do setup</h2>
 
-          <div id="metricas">
-            <div class="metrica metrica-jogos">
-              <div class="metrica-texto">
+          <div id="metrics">
+            <div class="metric metric-gaming">
+              <div class="metric-text">
                 <p>Jogos em 1440p</p>
-                <p class="metrica-nivel">Excelente</p>
+                <p class="metric-level">Excelente</p>
               </div>
-              <div class="metrica-barra">
-                <div class="metrica-barra-preenchida"></div>
+              <div class="metric-bar">
+                <div class="metric-bar-fill"></div>
               </div>
             </div>
 
-            <div class="metrica metrica-criacao">
-              <div class="metrica-texto">
+            <div class="metric metric-creation">
+              <div class="metric-text">
                 <p>Criação de conteúdo</p>
-                <p class="metrica-nivel">Excelente</p>
+                <p class="metric-level">Excelente</p>
               </div>
-              <div class="metrica-barra">
-                <div class="metrica-barra-preenchida"></div>
+              <div class="metric-bar">
+                <div class="metric-bar-fill"></div>
               </div>
             </div>
 
-            <div class="metrica metrica-custo-beneficio">
-              <div class="metrica-texto">
+            <div class="metric metric-value-for-money">
+              <div class="metric-text">
                 <p>Custo-benefício</p>
-                <p class="metrica-nivel">Muito bom</p>
+                <p class="metric-level">Muito bom</p>
               </div>
-              <div class="metrica-barra">
-                <div class="metrica-barra-preenchida"></div>
+              <div class="metric-bar">
+                <div class="metric-bar-fill"></div>
               </div>
             </div>
           </div>
 
-          <div id="resumo-total">
-            <p id="total-rotulo">Total</p>
-            <p id="total-valor">R$ 9.495</p>
+          <div id="summary-total">
+            <p id="total-label">Total</p>
+            <p id="total-value">R$ 9.495</p>
           </div>
 
-          <button id="botao-adicionar-configuracao" disabled>
+          <!-- Disabled until all required components are selected -->
+          <button id="add-build-button" disabled>
             <i class="fa-solid fa-cart-shopping"></i>
             Adicionar configuração
           </button>
 
-          <p id="resumo-aviso">Selecione armazenamento para continuar</p>
+          <p id="summary-warning">Selecione armazenamento para continuar</p>
         </div>
       </div>
     </main>
 
     <footer>
-      <div id="rodape-marca">
+      <!-- Footer brand: logo, slogan and security badge -->
+      <div id="footer-brand">
         <div class="logo">
           <img
-            class="logo-imagem"
+            class="logo-image"
             src="../assets/logo_hardware_hub.png"
             alt="Logo da HardwareHub"
           />
@@ -213,26 +229,27 @@
           <p class="logo-hub">Hub</p>
         </div>
 
-        <p id="rodape-slogan">
+        <p id="footer-slogan">
           Tecnologia certa, montagem segura e suporte de <br />verdade.
         </p>
 
-        <div id="rodape-selo-seguranca">
+        <div id="footer-security-badge">
           <i class="fa-solid fa-check"></i>
           <p>Compra 100% segura</p>
         </div>
       </div>
 
-      <div id="rodape-links">
-        <p class="rodape-link">Institucional</p>
-        <p class="rodape-link">Atendimento</p>
-        <p class="rodape-link">Pagamento</p>
-        <p class="rodape-link">Sobre nós</p>
-        <p class="rodape-link">Central de Ajuda</p>
-        <p class="rodape-link">Pix e cartão</p>
+      <!-- Footer links -->
+      <div id="footer-links">
+        <p class="footer-link">Institucional</p>
+        <p class="footer-link">Atendimento</p>
+        <p class="footer-link">Pagamento</p>
+        <p class="footer-link">Sobre nós</p>
+        <p class="footer-link">Central de Ajuda</p>
+        <p class="footer-link">Pix e cartão</p>
       </div>
 
-      <p id="rodape-copyright">2026 HardwareHub</p>
+      <p id="footer-copyright">2026 HardwareHub</p>
     </footer>
   </body>
 </html>
