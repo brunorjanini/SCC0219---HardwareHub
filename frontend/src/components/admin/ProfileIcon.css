@@ -1,0 +1,15 @@
+.circle {
+  background-color: var(--ciano);
+  border-radius: 50%;
+  height: 100%;
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+h1 {
+  font-size: 1rem;
+  font-weight: 500;
+}

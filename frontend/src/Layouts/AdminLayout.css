@@ -1,8 +1,3 @@
-/* Global font for all elements */
-* {
-  font-family: "Inter", sans-serif;
-}
-
 /* Page wrapper: sidebar and content side by side */
 .layout {
   display: flex;
@@ -11,7 +6,7 @@
 
 /* Logo inside the sidebar */
 .logo {
-  width: 9rem;
+  width: 11rem;
   padding: 0 0.8rem;
   padding-top: 1rem;
 }
@@ -21,7 +16,7 @@
   display: flex;
   flex-direction: column;
   background-color: var(--escuro);
-  width: 12.5rem;
+  width: 15rem;
   height: 100vh;
 }
 
@@ -41,7 +36,7 @@ nav a {
   width: 100%;
   padding: 0.7rem 0.8rem;
   color: rgb(206, 206, 206);
-  font-size: 0.65rem;
+  font-size: 0.7rem;
   text-decoration: none;
   border-radius: 0.5rem;
 }
@@ -50,4 +45,9 @@ nav a {
 nav a.active {
   background-color: var(--azul);
   color: white;
+}
+
+/* The page covers all the horizontal space */
+main {
+  width: 100%;
 }
