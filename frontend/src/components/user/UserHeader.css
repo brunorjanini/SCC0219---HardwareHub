@@ -1,0 +1,110 @@
+/* Header container */
+.header-style {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 2px solid rgb(226, 232, 240);
+}
+
+/* Top bar (free delivery / help) */
+.free-delivery {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 4rem;
+  background-color: rgb(11, 18, 32);
+  height: 1.8rem;
+}
+
+.free-delivery p {
+  font-size: 0.6rem;
+  font-weight: 500;
+  color: rgb(183, 183, 183);
+}
+
+/* Main header: logo, search, links, icons */
+.main-header {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2rem 4rem;
+}
+
+.logo-style {
+  width: 10rem;
+}
+
+/* Search bar (flex: 1 makes it fill the available space) */
+.search-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex: 1;
+  gap: 0.6rem;
+  padding: 0.5rem;
+  background-color: var(--cinza-claro);
+  border: 1px solid white;
+  border-radius: 10px;
+  height: 2.6rem;
+}
+
+.search-icon {
+  height: 1rem;
+  color: rgb(148, 163, 184);
+}
+
+/* Focus state: highlight the border instead of the default outline */
+.search-bar:focus-within {
+  border-color: var(--borda);
+}
+
+/* Input blends into the search bar */
+.search-bar input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+/* Cart and user icons */
+.shop-cart-icon,
+.user-icon {
+  height: 1.2rem;
+}
+
+/* "Monte seu PC" link */
+.link-monte-seu-pc {
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--azul);
+}
+
+/* Categories list */
+.search-classes ul {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  padding: 0.4rem 4rem;
+  margin-bottom: 0.4rem;
+}
+
+/* Shared category link style */
+.product-class,
+.product-class-red {
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+/* Default category color */
+.product-class {
+  color: rgb(71, 85, 105);
+}
+
+/* "Ofertas" highlighted in red */
+.product-class-red {
+  color: rgb(220, 38, 38);
+}
