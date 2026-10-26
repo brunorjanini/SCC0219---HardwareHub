@@ -1,0 +1,53 @@
+.sign-in-input-div {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  flex: 1;
+}
+
+.icon-input-div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.5rem 0.5rem;
+  background-color: white;
+  border: 2px solid var(--borda);
+  border-radius: 10px;
+  height: 2.4rem;
+  width: 100%;
+}
+
+/* Focus state: highlight the border instead of the default outline */
+.icon-input-div:focus-within {
+  border-color: var(--azul);
+}
+
+/* Input blends into the search bar */
+.icon-input-div input {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  height: 100%;
+  width: 100%;
+}
+
+.sign-in-input-div p {
+  color: black;
+  margin-bottom: 0.3rem;
+  font-weight: 400;
+}
+
+.input-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.input-icon svg {
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  color: rgb(137, 150, 170);
+}

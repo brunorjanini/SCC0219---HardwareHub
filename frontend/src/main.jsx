@@ -15,11 +15,16 @@ import { RouterProvider } from "react-router/dom";
 // Layouts shared by groups of pages
 import AdminLayout from "./Layouts/AdminLayout.jsx";
 import UserLayout from "./Layouts/UserLayout.jsx";
+import UserSignIn from "./pages/UserSignIn.jsx";
 
 // Route configuration (uses the browser History API)
 const router = createBrowserRouter([
   // Public storefront
-  { path: "/", element: <UserLayout /> },
+  {
+    path: "/",
+    element: <UserLayout />,
+    children: [{ index: true, element: <UserSignIn /> }],
+  },
 
   // Admin area: AdminLayout wraps all nested routes below
   {

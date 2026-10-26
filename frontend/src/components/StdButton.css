@@ -1,0 +1,9 @@
+button {
+  height: 2.4rem;
+  width: 100%;
+  border-radius: 10px;
+  border: none;
+  background-color: var(--azul);
+  color: white;
+  box-shadow: none;
+}

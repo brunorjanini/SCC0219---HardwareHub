@@ -1,0 +1,32 @@
+.image-box-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  height: 26rem;
+  width: 19rem;
+  border-radius: 1rem;
+  padding: 2rem 1.4rem;
+  /* Dark gradient on the sides over the background image */
+  background-image:
+    linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0) 60%,
+      rgba(0, 0, 0, 0) 70%,
+      rgba(0, 0, 0, 0.7)
+    ),
+    url("../../assets/pc_fundo.jpeg");
+  background-size: cover;
+  background-position: left;
+}
+
+.logo-style {
+  height: 1.8rem;
+}
+
+.image-box-div h2 {
+  color: rgb(233, 233, 233);
+  font-weight: 300;
+  font-size: 1.4rem;
+}
