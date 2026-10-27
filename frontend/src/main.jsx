@@ -16,6 +16,7 @@ import { RouterProvider } from "react-router/dom";
 import AdminLayout from "./Layouts/AdminLayout.jsx";
 import UserLayout from "./Layouts/UserLayout.jsx";
 import UserSignIn from "./pages/UserSignIn.jsx";
+import UserLogin from "./pages/UserLogin.jsx";
 
 // Route configuration (uses the browser History API)
 const router = createBrowserRouter([
@@ -23,7 +24,10 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <UserLayout />,
-    children: [{ index: true, element: <UserSignIn /> }],
+    children: [
+      { index: true, element: <UserSignIn /> },
+      { path: "login", element: <UserLogin /> },
+    ],
   },
 
   // Admin area: AdminLayout wraps all nested routes below

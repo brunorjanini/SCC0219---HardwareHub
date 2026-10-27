@@ -26,7 +26,7 @@
 }
 
 .image-box-div h2 {
-  color: rgb(233, 233, 233);
-  font-weight: 300;
-  font-size: 1.4rem;
+  color: rgb(233, 233, 233) !important;
+  font-weight: 300 !important;
+  font-size: 1.4rem !important;
 }

@@ -38,11 +38,7 @@ export default function UserSignIn() {
 
           {/* Password input + requirements hint */}
           <div className="password-criteria-div">
-            <SignInInput
-              type="password"
-              label="Password"
-              placeholder="minhasenha"
-            >
+            <SignInInput type="password" label="Senha" placeholder="minhasenha">
               <Lock />
             </SignInInput>
             <p>Mínimo de 8 caracteres, com número e símbolos</p>
