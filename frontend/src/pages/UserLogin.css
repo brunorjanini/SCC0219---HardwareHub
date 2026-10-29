@@ -17,6 +17,7 @@
   background-color: white;
   border-radius: 10px;
   height: fit-content;
+  min-width: 25rem;
 }
 
 /* Vertical stack of form fields; gap controls spacing between them */
@@ -59,4 +60,9 @@
   flex-direction: column;
   align-items: center;
   gap: 0.6rem;
+}
+
+.sign-in-link {
+  text-decoration: none;
+  color: var(--azul);
 }

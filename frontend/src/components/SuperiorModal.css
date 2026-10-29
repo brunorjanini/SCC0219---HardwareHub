@@ -1,0 +1,71 @@
+/* Shared toast layout: fixed at the top-right corner, text on the left and close button on the right */
+.error-div,
+.sucess-div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 20rem;
+  min-width: 18rem;
+  min-height: 3.6rem;
+  gap: 2px;
+  background-color: white;
+  border-radius: 7px;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 0.4rem 0.4rem;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.12);
+}
+
+/* Success variant: green bottom border */
+.sucess-div {
+  border-bottom: 10px solid var(--verde);
+}
+
+/* Error variant: red bottom border */
+.error-div {
+  border-bottom: 10px solid var(--vermelho);
+}
+
+/* Message text spacing and size (shared) */
+.error-div p,
+.sucess-div p {
+  font-size: 0.8rem;
+  font-weight: 400;
+  margin: 0.5rem 0.4rem;
+  margin-right: 0.3rem;
+}
+
+/* Message text color per variant */
+.sucess-div p {
+  color: var(--verde);
+}
+
+.error-div p {
+  color: var(--vermelho);
+}
+
+/* Close button container: stretches to the toast height and aligns the button to the right */
+.close-button-div {
+  align-self: stretch;
+  border-radius: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+}
+
+.close-button {
+  background-color: white;
+}
+
+/* Close icon: gray by default, black on hover */
+.close-button-div .x-icon {
+  color: rgb(76, 76, 76);
+  height: 1rem;
+  width: 1rem;
+}
+
+.close-button-div .x-icon:hover {
+  color: black;
+}

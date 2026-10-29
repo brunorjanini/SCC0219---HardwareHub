@@ -34,6 +34,7 @@
 
 .logo-style {
   width: 10rem;
+  width: fit-content;
 }
 
 /* Search bar (flex: 1 makes it fill the available space) */

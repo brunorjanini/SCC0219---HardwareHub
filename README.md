@@ -19,7 +19,7 @@ Trabalho da disciplina **SCC0219 - Introduction to Web Development**.
 ### 1.1 Requisitos do enunciado
 
 - O sistema possui 2 tipos de usuário: **Clientes** e **Administradores**.
-- O administrador registra e gerencia administradores, clientes e produtos/serviços. A conta `admin` (senha `admin`) já vem cadastrada.
+- O administrador registra e gerencia administradores, clientes e produtos/serviços.
 - O cliente acessa o sistema para comprar produtos/serviços.
 - Cadastro de administrador: nome, id, telefone, e-mail.
 - Cadastro de cliente: nome, id, endereço, telefone, e-mail.
@@ -162,6 +162,22 @@ As demais telas estão no PDF do mockup completo em `docs/` e no link do Figma a
 npm run build     # gera os arquivos otimizados em frontend/dist
 npm run preview   # serve o build localmente para conferência
 ```
+
+### 6.3 Mock server (json-server)
+
+Enquanto o backend real não existe, o frontend consome uma API simulada com [json-server](https://github.com/typicode/json-server), que usa o arquivo `frontend/src/mockAPI.json` como banco de dados.
+
+1. Entre na pasta do frontend: `cd scc0219_hardwarehub/frontend`
+2. Instale as dependências (o json-server entra junto, se estiver no `package.json`): `npm install`. Caso ainda não esteja instalado: `npm install -D json-server`
+3. Inicie o mock server:
+
+```bash
+npm run mock:server
+```
+
+### 6.4. Em **outro terminal**, inicie o frontend: `npm run dev`
+
+A API fica disponível em `http://localhost:3000`. Cada chave de primeiro nível do `mockAPI.json` vira um endpoint (por exemplo, `GET /users`) e aceita filtros por query string (por exemplo, `GET /users?email=ana@email.com`). Alterações feitas via `POST`, `PUT`, `PATCH` e `DELETE` são gravadas diretamente no `mockAPI.json`.
 
 ## 7. Problemas
 
