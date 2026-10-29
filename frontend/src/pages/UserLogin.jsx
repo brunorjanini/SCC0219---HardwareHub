@@ -4,10 +4,11 @@ import ImageBoxSignIn from "../components/user/ImageBoxSignIn";
 import SignInInput from "../components/SignInInput";
 import StdButton from "../components/StdButton";
 import { NavLink, useNavigate } from "react-router";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { AnimatePresence } from "motion/react";
 import SuperiorModal from "../components/SuperiorModal";
 import verifyEmail from "../utils/verifyEmail";
+import { useAuth } from "../contexts/AuthContext";
 
 // Login page: image on one side, form on the other
 export default function UserLogin() {
@@ -16,6 +17,14 @@ export default function UserLogin() {
   // Modal variant ("error" or "success")
   const [messageType, setMessageType] = useState("");
   const navigate = useNavigate();
+
+  const { user, login } = useAuth();
+
+  useEffect(() => {
+    if (user) {
+      navigate("/admin/clients");
+    }
+  }, [user, navigate]);
 
   // Validates the form, looks up the user by email and compares the password
   async function handleLogin(e) {
@@ -59,10 +68,10 @@ export default function UserLogin() {
         return;
       }
 
-      const user = users[0];
+      const userData = users[0];
 
       // Compare the stored password with the typed one
-      if (user.password !== password) {
+      if (userData.password !== password) {
         setMessage("Senha incorreta");
         setMessageType("error");
         return;
@@ -73,7 +82,7 @@ export default function UserLogin() {
 
       // Redirect to home after the success modal is shown
       setTimeout(() => {
-        navigate("/");
+        login({ id: userData.id });
       }, 1000);
     } catch (error) {
       // Show request/network errors in the modal

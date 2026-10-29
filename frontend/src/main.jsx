@@ -2,6 +2,9 @@
 import { createRoot } from "react-dom/client";
 import "./index.css";
 
+// Auth Context
+import AuthProvider from "./contexts/AuthContext.jsx";
+
 // Admin pages
 import AdminProducts from "./pages/AdminProducts.jsx";
 import AdminClients from "./pages/AdminClients.jsx";
@@ -49,5 +52,7 @@ const router = createBrowserRouter([
 
 // Mount the app into the #root element and enable routing
 createRoot(document.getElementById("root")).render(
-  <RouterProvider router={router} />,
+  <AuthProvider>
+    <RouterProvider router={router} />
+  </AuthProvider>,
 );
