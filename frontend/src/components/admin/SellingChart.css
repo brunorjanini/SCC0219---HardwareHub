@@ -1,0 +1,163 @@
+/* Card: fills all available horizontal space */
+.venda-chart {
+  --vc-bar: #2563eb;
+  --vc-bar-highlight: #06b6d4;
+  --vc-axis-width: 40px;
+  --vc-plot-height: 240px;
+
+  box-sizing: border-box;
+  width: 100%;
+  padding: 20px 24px 18px;
+  background: #fff;
+  border: 2px solid var(--borda);
+  border-radius: 16px;
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    sans-serif;
+}
+
+/* Header */
+.venda-chart__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.venda-chart__title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.venda-chart__badge {
+  padding: 5px 12px;
+  border-radius: 999px;
+  background: #eaf1fe;
+  color: #2563eb;
+  font-size: 13px;
+}
+
+/* Empty state */
+.venda-chart__empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--vc-plot-height);
+  color: #64748b;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Plot area: Y axis + bars */
+.venda-chart__plot {
+  display: flex;
+  height: var(--vc-plot-height);
+}
+
+.venda-chart__y-axis {
+  position: relative;
+  flex-shrink: 0;
+  width: var(--vc-axis-width);
+}
+
+.venda-chart__y-label {
+  position: absolute;
+  right: 8px;
+  transform: translateY(50%);
+  font-size: 11px;
+  line-height: 1;
+  color: #64748b;
+}
+
+.venda-chart__area {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+}
+
+/* Horizontal grid lines */
+.venda-chart__grid {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 0;
+  border-top: 1px dashed #e2e8f0;
+}
+
+.venda-chart__grid--base {
+  border-top: 1px solid #cbd5e1;
+}
+
+/* Bars: one column per data point, bars centered in each column */
+.venda-chart__bars {
+  position: absolute;
+  inset: 0;
+  display: flex;
+}
+
+.venda-chart__column {
+  position: relative;
+  display: flex;
+  flex: 1;
+  align-items: flex-end;
+  justify-content: center;
+  height: 100%;
+}
+
+.venda-chart__bar {
+  width: 41px;
+  max-width: 60%;
+  background: var(--vc-bar);
+  border-radius: 8px 8px 0 0;
+  cursor: pointer;
+  transition: opacity 0.15s ease;
+}
+
+.venda-chart__bar--highlight {
+  background: var(--vc-bar-highlight);
+}
+
+.venda-chart__bar--dimmed {
+  opacity: 0.6;
+}
+
+/* Tooltip shown above the hovered bar */
+.venda-chart__tooltip {
+  position: absolute;
+  z-index: 2;
+  padding: 4px 8px;
+  border-radius: 6px;
+  background: #0f172a;
+  color: #fff;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+/* X axis: spacer keeps labels aligned with the plot area */
+.venda-chart__x-axis {
+  display: flex;
+  margin-top: 10px;
+}
+
+.venda-chart__x-spacer {
+  flex-shrink: 0;
+  width: var(--vc-axis-width);
+}
+
+.venda-chart__x-labels {
+  display: flex;
+  flex: 1;
+  min-width: 0;
+}
+
+.venda-chart__x-label {
+  flex: 1;
+  text-align: center;
+  font-size: 11px;
+  color: #475569;
+}

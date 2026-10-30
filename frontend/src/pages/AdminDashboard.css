@@ -1,0 +1,112 @@
+.dashboard-page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.dashboard-main {
+  background-color: rgb(248, 250, 252);
+  flex: 1;
+  justify-content: stretch;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.subtitle-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  align-items: start;
+  height: 4.5rem;
+  width: 100%;
+}
+
+.subtitle-box h2 {
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: black;
+}
+
+.subtitle-box p {
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: var(--cinza-texto);
+}
+
+.general-infos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  gap: 10px;
+}
+
+.chart-and-activities {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: start;
+  padding: 0 2rem;
+  gap: 10px;
+}
+
+.actv-icon-box {
+  background-color: var(--azul-claro);
+  height: 2rem;
+  width: 2rem;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.actv-icon-box svg {
+  color: var(--azul);
+  height: 1rem;
+  width: fit-content;
+}
+
+.actv-descr {
+  display: flex;
+  flex-direction: column;
+}
+
+.actv-descr h3 {
+  font-size: 0.75rem;
+  font-weight: 300;
+  color: black;
+}
+
+.actv-descr p {
+  font-size: 0.62rem;
+  font-weight: 300;
+  color: var(--cinza-texto);
+}
+
+.activities-box {
+  display: flex;
+  flex-direction: column;
+  min-width: 25rem;
+  background-color: white;
+  border-radius: 16px;
+  border: 2px solid var(--borda);
+  padding: 1.2rem 1.3rem;
+  gap: 12px;
+}
+
+.activities-box h2 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.actv-box {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: start;
+  align-items: center;
+}

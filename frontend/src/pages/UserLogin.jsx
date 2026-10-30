@@ -22,7 +22,11 @@ export default function UserLogin() {
 
   useEffect(() => {
     if (user) {
-      navigate("/admin/clients");
+      if (user.type === "admin") {
+        navigate("/admin");
+      } else {
+        navigate("/");
+      }
     }
   }, [user, navigate]);
 
@@ -82,7 +86,7 @@ export default function UserLogin() {
 
       // Redirect to home after the success modal is shown
       setTimeout(() => {
-        login({ id: userData.id });
+        login({ id: userData.id, type: userData.type });
       }, 1000);
     } catch (error) {
       // Show request/network errors in the modal
